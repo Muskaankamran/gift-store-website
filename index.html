@@ -12,10 +12,13 @@
 
 <body>
     <div class="container">
+        
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+ 
+
+        <nav class="navbar navbar-expand-lg ">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="#">GiftStore</a>
+                <a class="navbar-brand fw-bold" href="#">The Gift Atelier</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -30,10 +33,11 @@
                                 <li><a class="dropdown-item" href="#" onclick="filterCategory('Candles')">Candles</a>
                                 </li>
                                 <li><a class="dropdown-item" href="#" onclick="filterCategory('Books')">Books</a></li>
-                                <li><a class="dropdown-item" href="#"
-                                        onclick="filterCategory('Keychains')">Keychains</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="filterCategory('Keychains')">Keychains</a></li>
                                 <li><a class="dropdown-item" href="#" onclick="filterCategory('Cups')">Cups</a></li>
                                  <li><a class="dropdown-item" href="#" onclick="filterCategory('noteBooks')">Notebooks</a></li>
+                                 <li><a class="dropdown-item" href="#" onclick="filterCategory('Perfumes')">Perfumes</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="filterCategory('toys')">Stuffed toys</a></li>
                                
                                 <li><a class="dropdown-item" href="#" onclick="filterCategory('Gifts')">Other Gifts</a>
                                 </li>
@@ -45,6 +49,52 @@
                 </div>
             </div>
         </nav>
+         
+         <div id="giftCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#giftCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#giftCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#giftCarousel" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- Slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/banner2.avif" class="d-block w-100" style="height:420px; object-fit:cover;">
+      <div class="carousel-caption d-none d-md-block">
+        <h3 class="fw-bold">Unique & Aesthetic Gifts</h3>
+        <p>Find the perfect gift for your loved ones</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/banner1.webp" class="d-block w-100" style="height:420px; object-fit:cover;">
+      <div class="carousel-caption d-none d-md-block">
+        <h3 class="fw-bold">Premium Perfume Collection</h3>
+        <p>Long-lasting fragrances for every occasion</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/banner3.jpg" class="d-block w-100" style="height:420px; object-fit:cover;">
+      <div class="carousel-caption d-none d-md-block">
+        <h3 class="fw-bold">Perfect Gifts At Perfect Prices</h3>
+        <p>Affordable luxury for someone special</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#giftCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#giftCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
 
         <!-- Hero Section -->
         <section class="hero text-center py-5 bg-light">

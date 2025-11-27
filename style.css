@@ -2,15 +2,27 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #fff8f0;
 }
+.navbar{
+    margin-top: 0;
+    background-color: #ffb7b1;
+}
 
 .navbar-brand {
-    color: #ff6f61;
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times;
+    font-size: 36px;
 }
 
 .navbar-brand:hover {
-    color: #ff3b2f;
+    color: whitesmoke;
+     font-family: 'Times New Roman', Times;
+     font-size: 36px;
 }
-
+.nav-link {
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times;
+    font-size: 20px;
+}
 .hero {
     background-color: #ffe6d9;
     color: #333;
@@ -36,7 +48,10 @@ body {
     font-weight: bold;
     color: #333;
 }
-
+.carousel{
+    padding-top: 26px;
+    margin-top: 17px;
+}
 .card-text {
     color: #555;
 }
