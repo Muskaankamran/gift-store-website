@@ -1,0 +1,92 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff8f0;
+}
+
+.navbar-brand {
+    color: #ff6f61;
+}
+
+.navbar-brand:hover {
+    color: #ff3b2f;
+}
+
+.hero {
+    background-color: #ffe6d9;
+    color: #333;
+}
+
+.hero h1 {
+    color: #ff6f61;
+}
+
+.products .card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.products .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    color: #555;
+}
+
+.btn-outline-danger {
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.btn-outline-danger:hover {
+    background-color: #ff6f61;
+    color: #fff;
+    border-color: #ff6f61;
+}
+
+
+
+/* Make all cards equal fixed size */
+.products .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;       /* fixed height for all cards */
+  width: 100%;         /* full width of the column */
+  border-radius: 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* Set fixed image height, crop with object-fit */
+.card-img-top {
+  height: 60%;         /* 60% of card height */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+/* Text and button container takes rest of height */
+.card-body {
+  height: 40%;         /* remaining 40% */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+/* Make column flex container to stretch cards */
+.col-md-3 {
+  display: flex;
+  align-items: stretch; /* ensure equal height columns */
+  margin-bottom: 1.5rem;
+}
