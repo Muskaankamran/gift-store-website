@@ -2,125 +2,173 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>The Gift Atelier</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <title>The Gift Atelier</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">The Gift Atelier</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="giftDropdown" role="button" data-bs-toggle="dropdown">
+              Categories
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" onclick="filterCategory('Candles')">Candles</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterCategory('Books')">Books</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterCategory('Keychains')">Keychains</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterCategory('Cups')">Cups</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterCategory('noteBooks')">Notebooks</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterCategory('Perfumes')">Perfumes</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterCategory('toys')">Stuffed toys</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterCategory('Gifts')">Other Gifts</a></li>
+              <li><a class="dropdown-item" href="#" onclick="displayProducts(products)">All Products</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="giftCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#giftCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#giftCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#giftCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/banner2.avif" class="d-block w-100" style="height:420px; object-fit:cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="fw-bold">Unique & Aesthetic Gifts</h3>
+          <p>Find the perfect gift for your loved ones</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="images/banner1.webp" class="d-block w-100" style="height:420px; object-fit:cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="fw-bold">Premium Perfume Collection</h3>
+          <p>Long-lasting fragrances for every occasion</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="images/banner3.jpg" class="d-block w-100" style="height:420px; object-fit:cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="fw-bold">Perfect Gifts At Perfect Prices</h3>
+          <p>Affordable luxury for someone special</p>
+        </div>
+      </div>
+    </div>
+
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#giftCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#giftCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+
+
+  <section class="hero text-center py-5 ">
     <div class="container">
-        
+      <h1 class="display-5 fw-bold">Unique & Aesthetic Gift Items</h1>
+      <p class="lead">Find the perfect gift for your loved ones</p>
+    </div>
+  </section>
 
- 
 
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container">
-                <a class="navbar-brand fw-bold" href="#">The Gift Atelier</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="giftDropdown" role="button"
-                                data-bs-toggle="dropdown">
-                                Categories
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#" onclick="filterCategory('Candles')">Candles</a>
-                                </li>
-                                <li><a class="dropdown-item" href="#" onclick="filterCategory('Books')">Books</a></li>
-                                <li><a class="dropdown-item" href="#" onclick="filterCategory('Keychains')">Keychains</a></li>
-                                <li><a class="dropdown-item" href="#" onclick="filterCategory('Cups')">Cups</a></li>
-                                 <li><a class="dropdown-item" href="#" onclick="filterCategory('noteBooks')">Notebooks</a></li>
-                                 <li><a class="dropdown-item" href="#" onclick="filterCategory('Perfumes')">Perfumes</a></li>
-                                <li><a class="dropdown-item" href="#" onclick="filterCategory('toys')">Stuffed toys</a></li>
-                               
-                                <li><a class="dropdown-item" href="#" onclick="filterCategory('Gifts')">Other Gifts</a>
-                                </li>
-                                <li><a class="dropdown-item" href="#" onclick="displayProducts(products)">All
-                                        Products</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+  <section class="products py-5">
+    <div class="container">
+      <div class="row" id="product-list">
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="background text-light pt-5 pb-4 mt-5">
+    <div class="container">
+
+      <div class="row">
+
+
+        <div class="col-md-4 mb-4">
+          <h5 class="textcolor fw-bold">The Gift Atelier</h5>
+          <p class="small">Your one-stop shop for aesthetic, luxury and unique gifts. Perfect items for every special
+            moment.</p>
+        </div>
+
+
+        <div class="col-md-4 mb-4">
+          <h5 class="textcolor fw-bold">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light">Home</a></li>
+            <li><a href="#" class="text-light">Categories</a></li>
+            <li><a href="#" class="text-light">All Products</a></li>
+            <li><a href="#" class="text-light">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-md-4 mb-4">
+          <h5 class="textcolor fw-bold">Contact Us</h5>
+          <form>
+            <div class="mb-2">
+              <input type="text" class="form-control" placeholder="Your Name" required>
             </div>
-        </nav>
-         
-         <div id="giftCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="mb-2">
+              <input type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="mb-2">
+              <textarea class="form-control" rows="3" placeholder="Your Message" required></textarea>
+            </div>
+            <button class="btn submitbutton btn-sm w-100" type="submit">Send</button>
+          </form>
+        </div>
 
-  <!-- Indicators -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#giftCarousel" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#giftCarousel" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#giftCarousel" data-bs-slide-to="2"></button>
-  </div>
-
-  <!-- Slides -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/banner2.avif" class="d-block w-100" style="height:420px; object-fit:cover;">
-      <div class="carousel-caption d-none d-md-block">
-        <h3 class="fw-bold">Unique & Aesthetic Gifts</h3>
-        <p>Find the perfect gift for your loved ones</p>
       </div>
-    </div>
 
-    <div class="carousel-item">
-      <img src="images/banner1.webp" class="d-block w-100" style="height:420px; object-fit:cover;">
-      <div class="carousel-caption d-none d-md-block">
-        <h3 class="fw-bold">Premium Perfume Collection</h3>
-        <p>Long-lasting fragrances for every occasion</p>
+      <hr class="border-light">
+
+      <div class="text-center small">
+        © 2025 The Gift Atelier. All Rights Reserved.
       </div>
-    </div>
 
-    <div class="carousel-item">
-      <img src="images/banner3.jpg" class="d-block w-100" style="height:420px; object-fit:cover;">
-      <div class="carousel-caption d-none d-md-block">
-        <h3 class="fw-bold">Perfect Gifts At Perfect Prices</h3>
-        <p>Affordable luxury for someone special</p>
-      </div>
     </div>
-  </div>
-
-  <!-- Controls -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#giftCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#giftCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
+  </footer>
+  <button onclick="scrollToTop()" id="topBtn" class="btn topbutton">
+    ↑
   </button>
 
-</div>
 
-        <!-- Hero Section -->
-        <section class="hero text-center py-5 bg-light">
-            <div class="container">
-                <h1 class="display-5 fw-bold">Unique & Aesthetic Gift Items</h1>
-                <p class="lead">Find the perfect gift for your loved ones</p>
-            </div>
-        </section>
-
-        <!-- Products Section -->
-        <section class="products py-5">
-            <div class="container">
-                <div class="row" id="product-list">
-                    <!-- Products will be injected here via JS -->
-                </div>
-            </div>
-        </section>
-
-
-
-
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>

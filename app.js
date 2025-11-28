@@ -308,7 +308,7 @@ const products = [
 
 // ⭐ Correct Filter Function
 function filterCategory(category) {
-    const filtered = products.filter(p => 
+    const filtered = products.filter(p =>
         p.category.toLowerCase() === category.toLowerCase()
     );
     displayProducts(filtered);
@@ -333,13 +333,13 @@ function displayProducts(items) {
                     
                     <div class="card-body text-center d-flex flex-column">
                         <h5 class="card-title">${item.name}</h5>
-                        <p class="card-text fw-bold">${item.price}</p>
+                        <p class="card-text fw-bold" color: #00796b;>${item.price}</p>
 
                         <p class="card-text" style="font-size: 13px; color: #555;">
                             ${item.description}
                         </p>
 
-                        <button class="btn btn-outline-danger btn-sm mt-auto">Add to Cart</button>
+                        <button class="btn cartbutton btn-sm mt-auto">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -352,3 +352,19 @@ function displayProducts(items) {
 
 // Show all products on page load
 displayProducts(products);
+
+window.onscroll = function () {
+    let btn = document.getElementById("topBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+};
+
+document.getElementById("topBtn").onclick = function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+};
